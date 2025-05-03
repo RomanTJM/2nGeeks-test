@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Разрешить только главную страницу
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^.*$ /404.html [L]
+
+# Обработка ошибки 404
+ErrorDocument 404 /404.html
